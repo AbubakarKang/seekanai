@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRobot, faImage, faLanguage, faCreditCard, faSpider, faEye, faCode, faBug, faCodeBranch, faCloud, faCheck, faClock, faMagnifyingGlass, faChevronLeft, faChevronRight, } from '@fortawesome/free-solid-svg-icons';
+import { faRobot, faTimes, faImage, faLanguage, faCreditCard, faSpider, faEye, faCode, faBug, faCodeBranch, faCloud, faCheck, faClock, faMagnifyingGlass, faChevronLeft, faChevronRight, } from '@fortawesome/free-solid-svg-icons';
 
 function MainComponent() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -575,6 +575,8 @@ function MainComponent() {
 
   // Define isClient directly in the component
   const [isClient, setIsClient] = React.useState(false);
+  const [isPopupOpen, setIsPopupOpen] = React.useState(false);
+  const [formData, setFormData] = React.useState({ name: "", link: "", purpose: "" });
 
 
   React.useEffect(() => {
@@ -591,6 +593,32 @@ function MainComponent() {
 
   const handleHideRandomAI = () => {
     setRandomTool(null);
+  };
+
+  React.useEffect(() => {
+    if (isPopupOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => (document.body.style.overflow = "");
+  }, [isPopupOpen]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.name && formData.link && formData.purpose) {
+      const emailContent = `AI Name: ${formData.name}\nLink to website: ${formData.link}\nPurpose of AI: ${formData.purpose}`;
+      window.location.href = `mailto:abubakar@advancedyoutube.com?subject=Request to Add AI&body=${encodeURIComponent(emailContent)}`;
+      setIsPopupOpen(false);
+      setFormData({ name: "", link: "", purpose: "" });
+    } else {
+      alert("Please fill out all fields.");
+    }
   };
 
 
@@ -734,11 +762,72 @@ function MainComponent() {
               Seek An AI
             </h1>
           </div>
-          <button className="px-6 py-2 rounded-full bg-[#5FFAC6] text-black font-medium hover:bg-[#4DE6B4] transition-all duration-300 font-roboto shadow-lg shadow-[#5FFAC640] hover:shadow-[#5FFAC660] hover:scale-105">
+          <button
+            className="px-6 py-2 rounded-full bg-[#5FFAC6] text-black font-medium hover:bg-[#4DE6B4]"
+            onClick={() => setIsPopupOpen(true)}
+          >
             Request an AI
           </button>
         </div>
       </nav>
+
+      {isPopupOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="absolute inset-0 bg-black bg-opacity-80"></div>
+          <div className="relative bg-black text-white rounded-2xl shadow-lg w-96 p-6 z-50">
+            <button
+              className="absolute top-4 right-4 text-[#5FFAC6] hover:text-white"
+              onClick={() => setIsPopupOpen(false)}
+            >
+              <FontAwesomeIcon icon={faTimes} />
+            </button>
+            <h2 className="text-xl text-center text-[#5FFAC6] font-semibold mb-8">Request an AI</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm" htmlFor="name">AI Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-2 rounded-lg bg-[#ffffff0a] border border-[#ffffff15] focus:outline-none focus:ring-2 focus:ring-[#5FFAC6]"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm" htmlFor="link">Link to Website</label>
+                <input
+                  type="url"
+                  id="link"
+                  name="link"
+                  value={formData.link}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-2 rounded-lg bg-[#ffffff0a] border border-[#ffffff15] focus:outline-none focus:ring-2 focus:ring-[#5FFAC6]"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm" htmlFor="purpose">Purpose of AI</label>
+                <textarea
+                  id="purpose"
+                  name="purpose"
+                  value={formData.purpose}
+                  onChange={handleInputChange}
+                  className="resize-none w-full px-4 py-2 rounded-lg bg-[#ffffff0a] border border-[#ffffff15] focus:outline-none focus:ring-2 focus:ring-[#5FFAC6]"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full px-4 py-2 rounded-full bg-[#5FFAC6] text-black font-medium hover:bg-[#4DE6B4]"
+              >
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
 
       <div className="w-full backdrop-blur-md px-8 py-4 sticky top-0 z-50">
         <div className="max-w-[1280px] mx-auto flex justify-center">
@@ -883,7 +972,7 @@ function MainComponent() {
             className="w-full h-16 pl-14 pr-4 rounded-2xl bg-[#ffffff0a] text-white text-lg border border-[#ffffff15] focus:outline-none focus:ring-2 focus:ring-[#5FFAC6] focus:border-transparent font-roboto placeholder-[#ffffff40] transition-all duration-300 hover:bg-[#ffffff12] shadow-lg cursor-text"
             style={{
               position: "relative",
-              zIndex: 50,
+              zIndex: 49,
               pointerEvents: "auto",
             }}
             autoComplete="off"
