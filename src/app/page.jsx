@@ -16,6 +16,7 @@ function MainComponent() {
     ContentCreation: 0,
     Miscellaneous: 0,
     Mainstream: 0,
+    Business: 0,
   });
   const [tools] = React.useState([
     {
@@ -2987,6 +2988,556 @@ function MainComponent() {
       isNew: false,
       editor_pick: false,
       link: "https://mirror.xyz",
+    },
+    {
+      name: "Salesforce",
+      description: "Customer relationship management platform",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://salesforce.com",
+    },
+    {
+      name: "HubSpot",
+      description: "Marketing, sales, and service software",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://hubspot.com",
+    },
+    {
+      name: "ZoomInfo",
+      description: "B2B contact database and intelligence",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://zoominfo.com",
+    },
+    {
+      name: "Outreach",
+      description: "Sales engagement platform",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://outreach.io",
+    },
+    {
+      name: "Salesloft",
+      description: "Sales engagement and productivity software",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://salesloft.com",
+    },
+    {
+      name: "Pipedrive",
+      description: "CRM and pipeline management",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://pipedrive.com",
+    },
+    {
+      name: "Clearbit",
+      description: "Data enrichment and API services",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://clearbit.com",
+    },
+    {
+      name: "Hunter",
+      description: "Email finding and verification tool",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://hunter.io",
+    },
+    {
+      name: "Lusha",
+      description: "Lead generation and contact database",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://lusha.com",
+    },
+    {
+      name: "Leadfeeder",
+      description: "Website visitor tracking for leads",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://leadfeeder.com",
+    },
+    {
+      name: "Drift",
+      description: "Conversational marketing platform",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://drift.com",
+    },
+    {
+      name: "Intercom",
+      description: "Customer messaging and support tools",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://intercom.com",
+    },
+    {
+      name: "Mailchimp",
+      description: "Email marketing and automation",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://mailchimp.com",
+    },
+    {
+      name: "Gong",
+      description: "Revenue intelligence and conversation analytics",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://gong.io",
+    },
+    {
+      name: "Chorus",
+      description: "Conversation intelligence for sales teams",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://chorus.ai",
+    },
+    {
+      name: "Clari",
+      description: "Revenue operations and forecasting",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://clari.com",
+    },
+    {
+      name: "XANT",
+      description: "Sales engagement and AI-powered insights",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://xant.ai",
+    },
+    {
+      name: "Zoho",
+      description: "Suite of business applications and CRM",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://zoho.com",
+    },
+    {
+      name: "Freshworks",
+      description: "CRM and customer engagement software",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://freshworks.com",
+    },
+    {
+      name: "Yesware",
+      description: "Email tracking and sales productivity",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://yesware.com",
+    },
+    {
+      name: "Groove",
+      description: "Sales engagement platform",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://groove.co",
+    },
+    {
+      name: "Mixmax",
+      description: "Email productivity and scheduling tools",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://mixmax.com",
+    },
+    {
+      name: "Reply",
+      description: "Sales automation and outreach platform",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://reply.io",
+    },
+    {
+      name: "Cognism",
+      description: "B2B data and compliance solutions",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://cognism.com",
+    },
+    {
+      name: "Seamless",
+      description: "AI-powered lead generation",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://seamless.ai",
+    },
+    {
+      name: "UpLead",
+      description: "B2B prospecting and contact database",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://uplead.com",
+    },
+    {
+      name: "PhantomBuster",
+      description: "Automation and scraping tools",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://phantombuster.com",
+    },
+    {
+      name: "Snov",
+      description: "Lead generation and email finder",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://snov.io",
+    },
+    {
+      name: "Leadsquared",
+      description: "Marketing automation and CRM",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://leadsquared.com",
+    },
+    {
+      name: "AgileCRM",
+      description: "CRM with marketing automation",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://agilecrm.com",
+    },
+    {
+      name: "Copper",
+      description: "CRM designed for Google Workspace",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://copper.com",
+    },
+    {
+      name: "Nimble",
+      description: "Social CRM and contact management",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://nimble.com",
+    },
+    {
+      name: "Infer",
+      description: "Predictive analytics for sales and marketing",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://infer.com",
+    },
+    {
+      name: "Leadspace",
+      description: "Customer data platform and analytics",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://leadspace.com",
+    },
+    {
+      name: "6sense",
+      description: "Account engagement and predictive analytics",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://6sense.com",
+    },
+    {
+      name: "People",
+      description: "Revenue intelligence and automation",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://people.ai",
+    },
+    {
+      name: "Exceed",
+      description: "Conversational AI for lead generation",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://exceed.ai",
+    },
+    {
+      name: "Conversica",
+      description: "AI-powered sales assistant",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://conversica.com",
+    },
+    {
+      name: "Regie",
+      description: "AI content generation for sales",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://regie.ai",
+    },
+    {
+      name: "Lavender",
+      description: "AI email coaching and assistance",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://lavender.ai",
+    },
+    {
+      name: "Zoom",
+      description: "AI meeting assistant and scheduling",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://zoom.ai",
+    },
+    {
+      name: "User",
+      description: "User engagement and marketing platform",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://user.com",
+    },
+    {
+      name: "Autoklose",
+      description: "Sales automation and lead generation",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://autoklose.com",
+    },
+    {
+      name: "Growbots",
+      description: "AI-driven outbound sales platform",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://growbots.com",
+    },
+    {
+      name: "Albert",
+      description: "AI-powered digital advertising",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://albert.ai",
+    },
+    {
+      name: "Triger",
+      description: "Workflow automation and integration",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://triger.io",
+    },
+    {
+      name: "Veloxy",
+      description: "Sales enablement and analytics",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://veloxy.io",
+    },
+    {
+      name: "Salesmsg",
+      description: "Business texting and communication",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://salesmsg.io",
+    },
+    {
+      name: "Kixie",
+      description: "Sales engagement and phone system",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://kixie.com",
+    },
+    {
+      name: "Closely",
+      description: "LinkedIn automation and lead generation",
+      category: "Business",
+      icon: faClock,
+      image: "/placeholder.jpg",
+      trending: false,
+      isNew: false,
+      editor_pick: false,
+      link: "https://closely.ai",
     }
   ]);
 
@@ -3255,6 +3806,7 @@ function MainComponent() {
               'Development',
               "Programming",
               "Content Creation",
+              "Business",
               "Miscellaneous",
             ].map((category) => (
               <a
@@ -3575,6 +4127,78 @@ function MainComponent() {
         </div>
 
         <div className="mb-16">
+          <h2 id="development" className="text-2xl text-white font-roboto mb-6">Development</h2>
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-300 gap-6"
+                style={{ transform: `translateX(-${scrollPosition.Development}px)` }}
+              >
+                {tools
+                  .filter((tool) => tool.category === "Development")
+                  .map((tool, index) => (
+                    <a
+                      key={index}
+                      href={tool.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative w-[280px] flex-shrink-0 h-[220px] rounded-2xl group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    >
+                      {tool.isNew && (
+                        <div className="absolute top-3 left-3 z-10">
+                          <span className="bg-[#FF0000] text-white text-xs font-bold px-3 py-1.5 rounded-md">
+                            NEW
+                          </span>
+                        </div>
+                      )}
+                      <img
+                        src={tool.image}
+                        alt={tool.name}
+                        className="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all duration-300 rounded-2xl"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#00000090] to-transparent group-hover:via-[#00000070] transition-all duration-300 rounded-2xl">
+                        <div className="absolute bottom-0 left-0 right-0 p-5 transform transition-all duration-300 group-hover:translate-y-[-4px]">
+                          <h3 className="text-white text-lg font-semibold font-roboto">
+                            {tool.name}
+                          </h3>
+                          <p className="text-[#ffffff80] text-sm mt-1 line-clamp-2 font-roboto">
+                            {tool.description}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+              </div>
+            </div>
+            <button
+              onClick={() => handleScroll('Development', 'left')} // Corrected category case
+              className="absolute -left-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
+              style={{ display: scrollPosition.Development === 0 ? "none" : "block" }}
+            >
+              <FontAwesomeIcon icon={faChevronLeft} className="text-white/80 text-sm" />
+            </button>
+            <button
+              onClick={() => handleScroll('Development', 'right')} // Corrected category case
+              className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
+              style={{
+                display: (() => {
+                  if (!isClient) return 'none';
+                  const developmentTools = tools.filter((t) => t.category === 'Development');
+                  const itemWidth = 280;
+                  const gap = 24;
+                  const containerWidth = window.innerWidth > 1280 ? 1280 - 64 : window.innerWidth - 32;
+                  const itemsPerView = Math.floor(containerWidth / (itemWidth + gap));
+                  const maxScroll = Math.max(0, (developmentTools.length - itemsPerView) * (itemWidth + gap));
+                  return scrollPosition.Development >= maxScroll ? 'none' : 'block';
+                })(),
+              }}
+            >
+              <FontAwesomeIcon icon={faChevronRight} className="text-white/80 text-sm" />
+            </button>
+          </div>
+        </div>
+
+        <div className="mb-16">
           <h2 className="text-2xl text-white font-roboto mb-6">
             Editor's Picks
           </h2>
@@ -3728,15 +4352,15 @@ function MainComponent() {
         </div>
 
         <div className="mb-16">
-          <h2 id="development" className="text-2xl text-white font-roboto mb-6">Development</h2>
+          <h2 id="business" className="text-2xl text-white font-roboto mb-6">Business</h2>
           <div className="relative">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-300 gap-6"
-                style={{ transform: `translateX(-${scrollPosition.Development}px)` }}
+                style={{ transform: `translateX(-${scrollPosition.Business}px)` }}
               >
                 {tools
-                  .filter((tool) => tool.category === "Development")
+                  .filter((tool) => tool.category === "Business")
                   .map((tool, index) => (
                     <a
                       key={index}
@@ -3772,25 +4396,25 @@ function MainComponent() {
               </div>
             </div>
             <button
-              onClick={() => handleScroll('Development', 'left')} // Corrected category case
+              onClick={() => handleScroll('Business', 'left')} // Corrected category case
               className="absolute -left-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
-              style={{ display: scrollPosition.Development === 0 ? "none" : "block" }}
+              style={{ display: scrollPosition.Business === 0 ? "none" : "block" }}
             >
               <FontAwesomeIcon icon={faChevronLeft} className="text-white/80 text-sm" />
             </button>
             <button
-              onClick={() => handleScroll('Development', 'right')} // Corrected category case
+              onClick={() => handleScroll('Business', 'right')} // Corrected category case
               className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
               style={{
                 display: (() => {
                   if (!isClient) return 'none';
-                  const developmentTools = tools.filter((t) => t.category === 'Development');
+                  const BusinessTools = tools.filter((t) => t.category === 'Business');
                   const itemWidth = 280;
                   const gap = 24;
                   const containerWidth = window.innerWidth > 1280 ? 1280 - 64 : window.innerWidth - 32;
                   const itemsPerView = Math.floor(containerWidth / (itemWidth + gap));
-                  const maxScroll = Math.max(0, (developmentTools.length - itemsPerView) * (itemWidth + gap));
-                  return scrollPosition.Development >= maxScroll ? 'none' : 'block';
+                  const maxScroll = Math.max(0, (BusinessTools.length - itemsPerView) * (itemWidth + gap));
+                  return scrollPosition.Business >= maxScroll ? 'none' : 'block';
                 })(),
               }}
             >
