@@ -1086,15 +1086,15 @@ function MainComponent() {
         </div>
 
         <div className="mb-16">
-          <h2 id="development" className="text-2xl text-white font-roboto mb-6">Development</h2>
+          <h2 id="productivity" className="text-2xl text-white font-roboto mb-6">Productivity</h2>
           <div className="relative">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-300 gap-6"
-                style={{ transform: `translateX(-${scrollPosition.Development}px)` }}
+                style={{ transform: `translateX(-${scrollPosition.Productivity}px)` }}
               >
                 {tools
-                  .filter((tool) => tool.category === "Development")
+                  .filter((tool) => tool.category === "Productivity")
                   .map((tool, index) => (
                     <a
                       key={index}
@@ -1130,25 +1130,25 @@ function MainComponent() {
               </div>
             </div>
             <button
-              onClick={() => handleScroll('Development', 'left')} // Corrected category case
+              onClick={() => handleScroll('Productivity', 'left')} // Corrected category case
               className="absolute -left-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
-              style={{ display: scrollPosition.Development === 0 ? "none" : "block" }}
+              style={{ display: scrollPosition.Productivity === 0 ? "none" : "block" }}
             >
               <FontAwesomeIcon icon={faChevronLeft} className="text-white/80 text-sm" />
             </button>
             <button
-              onClick={() => handleScroll('Development', 'right')} // Corrected category case
+              onClick={() => handleScroll('Productivity', 'right')} // Corrected category case
               className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
               style={{
                 display: (() => {
                   if (!isClient) return 'none';
-                  const developmentTools = tools.filter((t) => t.category === 'Development');
+                  const ProductivityTools = tools.filter((t) => t.category === 'Productivity');
                   const itemWidth = 280;
                   const gap = 24;
                   const containerWidth = window.innerWidth > 1280 ? 1280 - 64 : window.innerWidth - 32;
                   const itemsPerView = Math.floor(containerWidth / (itemWidth + gap));
-                  const maxScroll = Math.max(0, (developmentTools.length - itemsPerView) * (itemWidth + gap));
-                  return scrollPosition.Development >= maxScroll ? 'none' : 'block';
+                  const maxScroll = Math.max(0, (ProductivityTools.length - itemsPerView) * (itemWidth + gap));
+                  return scrollPosition.Productivity >= maxScroll ? 'none' : 'block';
                 })(),
               }}
             >
@@ -1311,15 +1311,15 @@ function MainComponent() {
         </div>
 
         <div className="mb-16">
-          <h2 id="productivity" className="text-2xl text-white font-roboto mb-6">Productivity</h2>
+          <h2 id="development" className="text-2xl text-white font-roboto mb-6">Development</h2>
           <div className="relative">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-300 gap-6"
-                style={{ transform: `translateX(-${scrollPosition.Productivity}px)` }}
+                style={{ transform: `translateX(-${scrollPosition.Development}px)` }}
               >
                 {tools
-                  .filter((tool) => tool.category === "Productivity")
+                  .filter((tool) => tool.category === "Development")
                   .map((tool, index) => (
                     <a
                       key={index}
@@ -1355,25 +1355,25 @@ function MainComponent() {
               </div>
             </div>
             <button
-              onClick={() => handleScroll('Productivity', 'left')} // Corrected category case
+              onClick={() => handleScroll('Development', 'left')} // Corrected category case
               className="absolute -left-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
-              style={{ display: scrollPosition.Productivity === 0 ? "none" : "block" }}
+              style={{ display: scrollPosition.Development === 0 ? "none" : "block" }}
             >
               <FontAwesomeIcon icon={faChevronLeft} className="text-white/80 text-sm" />
             </button>
             <button
-              onClick={() => handleScroll('Productivity', 'right')} // Corrected category case
+              onClick={() => handleScroll('Development', 'right')} // Corrected category case
               className="absolute -right-5 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[#ffffff20] border border-white/20 shadow-lg transition-all duration-300 z-10 hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:bg-[#ffffff30]"
               style={{
                 display: (() => {
                   if (!isClient) return 'none';
-                  const productivityTools = tools.filter((t) => t.category === 'Productivity');
+                  const developmentTools = tools.filter((t) => t.category === 'Development');
                   const itemWidth = 280;
                   const gap = 24;
                   const containerWidth = window.innerWidth > 1280 ? 1280 - 64 : window.innerWidth - 32;
                   const itemsPerView = Math.floor(containerWidth / (itemWidth + gap));
-                  const maxScroll = Math.max(0, (productivityTools.length - itemsPerView) * (itemWidth + gap));
-                  return scrollPosition.Productivity >= maxScroll ? 'none' : 'block';
+                  const maxScroll = Math.max(0, (developmentTools.length - itemsPerView) * (itemWidth + gap));
+                  return scrollPosition.Development >= maxScroll ? 'none' : 'block';
                 })(),
               }}
             >
@@ -1648,6 +1648,7 @@ function MainComponent() {
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#5FFAC6] to-[#4DE6B4] rounded-full blur opacity-30"></div>
               <FontAwesomeIcon icon={faRobot} className="relative text-[#5FFAC6] text-2xl mr-3" />
+
             </div>
             <h2 className="text-3xl text-white font-orbitron bg-gradient-to-r from-[#ffffff] to-[#ffffff80] bg-clip-text text-transparent">
               SeekAnAI
